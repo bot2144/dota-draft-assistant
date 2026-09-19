@@ -1,0 +1,78 @@
+.draft-status__list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.draft-status__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.draft-status__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+.draft-status__item--high .draft-status__dot { background: var(--danger); box-shadow: 0 0 6px var(--danger); }
+.draft-status__item--medium .draft-status__dot { background: var(--warn); }
+.draft-status__item--low .draft-status__dot { background: var(--text-muted); }
+
+.draft-status__subheading {
+  margin: 12px 0 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.draft-status__threat {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12.5px;
+}
+.draft-status__threat-name { font-weight: 700; color: var(--enemy); }
+.draft-status__threat-level { font-weight: 800; color: var(--text-primary); }
+.draft-status__threat-reason { color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+
+.draft-status__empty { color: var(--text-muted); font-size: 13px; margin: 0 0 10px; }
+
+.draft-status__threat-tier {
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.draft-status__threat-tier--primary { background: rgba(255, 70, 70, 0.18); color: var(--danger); }
+.draft-status__threat-tier--secondary { background: rgba(255, 176, 32, 0.16); color: var(--warn); }
+.draft-status__threat-tier--tertiary { background: rgba(255, 255, 255, 0.06); color: var(--text-muted); }
+
+.draft-status__win-conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.draft-status__win-condition {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12.5px;
+}
+.draft-status__win-condition-label {
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.draft-status__win-condition-text { color: var(--text-secondary); }

@@ -1,0 +1,69 @@
+.best-picks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.best-picks__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 8px 8px 4px;
+  border-radius: var(--radius-sm);
+  transition: background 120ms ease;
+}
+.best-picks__row:hover { background: rgba(255, 255, 255, 0.03); }
+
+.best-picks__rank {
+  width: 18px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.best-picks__name {
+  font-size: 13.5px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 120px;
+}
+
+.best-picks__badges {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.best-picks__badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.best-picks__badge--bestPick { background: rgba(76, 217, 100, 0.16); color: var(--ok); }
+.best-picks__badge--alternative { background: rgba(255, 255, 255, 0.08); color: var(--text-secondary); }
+.best-picks__badge--safePick { background: rgba(90, 160, 255, 0.16); color: #5aa0ff; }
+.best-picks__badge--highCeiling { background: rgba(255, 176, 32, 0.16); color: #ffb020; }
+.best-picks__badge--comfortPick { background: rgba(190, 120, 255, 0.16); color: #be78ff; }
+
+.best-picks__score {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ok);
+  font-variant-numeric: tabular-nums;
+  min-width: 28px;
+  text-align: right;
+}
+
+.best-picks__empty { color: var(--text-muted); font-size: 13px; }

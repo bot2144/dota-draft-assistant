@@ -1,0 +1,38 @@
+.simulator-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.simulator-page__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.simulator-page__wide { grid-column: 1 / -1; }
+
+.simulator-page__score {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--accent);
+}
+.simulator-page__power-curve { color: var(--text-secondary); font-size: 12.5px; margin-top: 8px; }
+
+.simulator-page__list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.simulator-page__muted { color: var(--text-muted); list-style: none; margin-left: -18px; }
+
+.simulator-page__summary {
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--text-primary);
+}

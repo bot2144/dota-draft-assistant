@@ -1,0 +1,17 @@
+.ai-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.ai-indicator__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--text-muted);
+}
+.ai-indicator--on .ai-indicator__dot { background: var(--ok); box-shadow: 0 0 6px var(--ok); }
+.ai-indicator--off .ai-indicator__dot { background: var(--text-muted); }
+.ai-indicator--loading { color: var(--accent); }

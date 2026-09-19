@@ -1,0 +1,151 @@
+{
+  "app": {
+    "title": "Dota 2 Draft Assistant",
+    "tagline": "AI-powered draft intelligence"
+  },
+  "nav": {
+    "liveDraft": "Live Draft",
+    "explorer": "Pick Explorer",
+    "simulator": "Simulator",
+    "compare": "Compare",
+    "settings": "Settings",
+    "history": "History"
+  },
+  "draft": {
+    "yourTeam": "YOUR TEAM",
+    "enemyTeam": "ENEMY TEAM",
+    "addHero": "Add Hero",
+    "searchHero": "Search hero...",
+    "pasteDraft": "Paste Draft",
+    "clearDraft": "Clear Draft",
+    "bans": "Bans",
+    "bestPicks": "BEST PICKS",
+    "recommendedBans": "RECOMMENDED BANS",
+    "whatShouldIPick": "WHAT SHOULD I PICK?",
+    "why": "WHY?",
+    "strengths": "Strengths",
+    "risks": "Risks",
+    "alternatives": "Alternatives",
+    "avoid": "Avoid",
+    "draftIssues": "Draft Issues",
+    "enemyThreats": "Enemy Threats",
+    "noAllyPicks": "No allies picked yet.",
+    "noEnemyPicks": "No enemy picks yet.",
+    "insufficientData": "Insufficient data"
+  },
+  "explorer": {
+    "title": "Pick Explorer",
+    "profile": "Hero Profile",
+    "bestPositions": "Best Positions",
+    "bestAllies": "Best Allies",
+    "worstEnemies": "Worst Enemies",
+    "vsCurrentEnemyDraft": "Vs Current Enemy Draft",
+    "scoreForCurrentDraft": "Score For Current Draft",
+    "selectHero": "Select a hero to explore"
+  },
+  "simulator": {
+    "title": "Draft Simulator",
+    "draftScore": "Draft Score",
+    "strengths": "Strengths",
+    "weaknesses": "Weaknesses",
+    "majorThreats": "Major Threats",
+    "recommendedChanges": "Recommended Changes"
+  },
+  "compare": {
+    "title": "Compare Heroes",
+    "addToCompare": "Add hero to compare",
+    "removeAll": "Clear"
+  },
+  "settings": {
+    "title": "Settings",
+    "aiProvider": "AI Provider",
+    "apiKey": "API Key",
+    "baseUrl": "Base URL",
+    "model": "Model",
+    "language": "Language",
+    "patch": "Patch",
+    "dataSource": "Data Source",
+    "updateData": "Update Data",
+    "cache": "Cache",
+    "clearCache": "Clear Cache",
+    "theme": "Theme",
+    "hotkeys": "Hotkeys",
+    "toggleOverlay": "Toggle Overlay",
+    "privacy": "Privacy",
+    "allowAIRequests": "Allow AI requests",
+    "shareDraftWithAI": "Share draft context with AI",
+    "weights": "Scoring Weights",
+    "resetWeights": "Reset to defaults",
+    "saved": "Saved",
+    "aiIndicatorOn": "AI request will be sent",
+    "aiIndicatorOff": "Local engine only — no AI request",
+    "dataStatusLive": "Live stats connected",
+    "dataStatusBundled": "Using bundled offline snapshot",
+    "dataStatusStale": "Using cached stats (refresh failed)"
+  },
+  "common": {
+    "close": "Close",
+    "loading": "Loading...",
+    "score": "Score",
+    "position": "Position",
+    "role": "Role",
+    "attribute": "Attribute",
+    "confidenceCurated": "curated",
+    "confidenceEstimated": "estimated",
+    "confidenceLive": "live",
+    "confidenceInsufficient": "insufficient data"
+  },
+  "history": {
+    "title": "Save this draft",
+    "hint": "Save the current draft and its full recommendation snapshot locally, so you can reopen and review it later.",
+    "saveCurrent": "Save current draft",
+    "savedDrafts": "Saved drafts",
+    "empty": "No saved drafts yet.",
+    "reopen": "Reopen",
+    "delete": "Delete"
+  },
+  "recommendation": {
+    "bestPick": "Best Pick",
+    "alternative": "Alternative",
+    "safePick": "Safe Pick",
+    "highCeiling": "High Ceiling",
+    "comfortPick": "Comfort Pick"
+  },
+  "winCondition": {
+    "title": "Win Condition",
+    "ally": "Your team",
+    "enemy": "Enemy team",
+    "early": "Early game",
+    "mid": "Mid game",
+    "late": "Late game"
+  },
+  "threatTier": {
+    "primary": "Primary threat",
+    "secondary": "Secondary threat",
+    "tertiary": "Threat"
+  },
+  "playerProfile": {
+    "title": "Player Profile (optional)",
+    "hint": "Purely local, never overrides objective analysis — only used to compute a separate Player Fit score shown alongside it.",
+    "enable": "Use my player profile",
+    "experienceLevel": "Experience level",
+    "expNew": "New to Dota",
+    "expCasual": "Casual",
+    "expCompetitive": "Competitive",
+    "comfortHeroes": "Comfort heroes",
+    "avoidHeroes": "Heroes to avoid",
+    "addHero": "Add hero"
+  },
+  "whatIf": {
+    "title": "What if I pick this?",
+    "before": "Before",
+    "after": "After",
+    "difference": "Difference",
+    "draftScore": "Draft score"
+  },
+  "onboarding": {
+    "welcome": "Welcome to Dota AI Companion",
+    "body": "A local-first draft analysis engine — works fully offline, with an optional AI layer for plain-language explanations. Nothing is sent anywhere unless you configure an AI provider yourself in Settings.",
+    "getStarted": "Get started"
+  }
+}

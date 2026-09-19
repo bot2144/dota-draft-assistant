@@ -1,0 +1,151 @@
+{
+  "app": {
+    "title": "Dota 2 Draft Assistant",
+    "tagline": "ИИ-аналитика драфта"
+  },
+  "nav": {
+    "liveDraft": "Live Draft",
+    "explorer": "Обзор героев",
+    "simulator": "Симулятор",
+    "compare": "Сравнение",
+    "settings": "Настройки",
+    "history": "История"
+  },
+  "draft": {
+    "yourTeam": "ВАША КОМАНДА",
+    "enemyTeam": "КОМАНДА ПРОТИВНИКА",
+    "addHero": "Добавить героя",
+    "searchHero": "Поиск героя...",
+    "pasteDraft": "Вставить драфт",
+    "clearDraft": "Очистить драфт",
+    "bans": "Баны",
+    "bestPicks": "ЛУЧШИЕ ПИКИ",
+    "recommendedBans": "РЕКОМЕНДУЕМЫЕ БАНЫ",
+    "whatShouldIPick": "КОГО ПИКНУТЬ?",
+    "why": "ПОЧЕМУ?",
+    "strengths": "Плюсы",
+    "risks": "Риски",
+    "alternatives": "Альтернативы",
+    "avoid": "Избегать",
+    "draftIssues": "Проблемы драфта",
+    "enemyThreats": "Угрозы противника",
+    "noAllyPicks": "Ваша команда ещё не выбрана.",
+    "noEnemyPicks": "Команда противника ещё не выбрана.",
+    "insufficientData": "Недостаточно данных"
+  },
+  "explorer": {
+    "title": "Обзор героев",
+    "profile": "Профиль героя",
+    "bestPositions": "Лучшие позиции",
+    "bestAllies": "Лучшие союзники",
+    "worstEnemies": "Худшие противники",
+    "vsCurrentEnemyDraft": "Против текущего драфта врага",
+    "scoreForCurrentDraft": "Оценка для текущего драфта",
+    "selectHero": "Выберите героя для анализа"
+  },
+  "simulator": {
+    "title": "Симулятор драфта",
+    "draftScore": "Оценка драфта",
+    "strengths": "Сильные стороны",
+    "weaknesses": "Слабые стороны",
+    "majorThreats": "Главные угрозы",
+    "recommendedChanges": "Рекомендуемые изменения"
+  },
+  "compare": {
+    "title": "Сравнение героев",
+    "addToCompare": "Добавить героя к сравнению",
+    "removeAll": "Очистить"
+  },
+  "settings": {
+    "title": "Настройки",
+    "aiProvider": "Провайдер ИИ",
+    "apiKey": "API-ключ",
+    "baseUrl": "Базовый URL",
+    "model": "Модель",
+    "language": "Язык",
+    "patch": "Патч",
+    "dataSource": "Источник данных",
+    "updateData": "Обновить данные",
+    "cache": "Кэш",
+    "clearCache": "Очистить кэш",
+    "theme": "Тема",
+    "hotkeys": "Горячие клавиши",
+    "toggleOverlay": "Показать/скрыть окно",
+    "privacy": "Приватность",
+    "allowAIRequests": "Разрешить запросы к ИИ",
+    "shareDraftWithAI": "Передавать драфт в ИИ",
+    "weights": "Веса оценки",
+    "resetWeights": "Сбросить по умолчанию",
+    "saved": "Сохранено",
+    "aiIndicatorOn": "Будет отправлен запрос к ИИ",
+    "aiIndicatorOff": "Только локальный движок — без запроса к ИИ",
+    "dataStatusLive": "Подключена живая статистика",
+    "dataStatusBundled": "Используется встроенный офлайн-снапшот",
+    "dataStatusStale": "Используются кэшированные данные (обновление не удалось)"
+  },
+  "common": {
+    "close": "Закрыть",
+    "loading": "Загрузка...",
+    "score": "Оценка",
+    "position": "Позиция",
+    "role": "Роль",
+    "attribute": "Атрибут",
+    "confidenceCurated": "проверено вручную",
+    "confidenceEstimated": "оценка",
+    "confidenceLive": "актуальные данные",
+    "confidenceInsufficient": "недостаточно данных"
+  },
+  "history": {
+    "title": "Сохранить драфт",
+    "hint": "Сохраните текущий драфт вместе с полным снимком рекомендаций, чтобы вернуться к нему позже.",
+    "saveCurrent": "Сохранить текущий драфт",
+    "savedDrafts": "Сохранённые драфты",
+    "empty": "Пока нет сохранённых драфтов.",
+    "reopen": "Открыть",
+    "delete": "Удалить"
+  },
+  "recommendation": {
+    "bestPick": "Лучший пик",
+    "alternative": "Альтернатива",
+    "safePick": "Надёжный пик",
+    "highCeiling": "Высокий потолок",
+    "comfortPick": "Комфортный пик"
+  },
+  "winCondition": {
+    "title": "Условие победы",
+    "ally": "Ваша команда",
+    "enemy": "Команда противника",
+    "early": "Ранняя игра",
+    "mid": "Мид-гейм",
+    "late": "Поздняя игра"
+  },
+  "threatTier": {
+    "primary": "Главная угроза",
+    "secondary": "Вторичная угроза",
+    "tertiary": "Угроза"
+  },
+  "playerProfile": {
+    "title": "Профиль игрока (опционально)",
+    "hint": "Хранится только локально и никогда не подменяет объективный анализ — используется лишь для отдельной оценки \"под вас\".",
+    "enable": "Использовать мой профиль",
+    "experienceLevel": "Уровень опыта",
+    "expNew": "Новичок",
+    "expCasual": "Казуальный",
+    "expCompetitive": "Соревновательный",
+    "comfortHeroes": "Комфортные герои",
+    "avoidHeroes": "Избегать героев",
+    "addHero": "Добавить героя"
+  },
+  "whatIf": {
+    "title": "А что если выбрать этого героя?",
+    "before": "До",
+    "after": "После",
+    "difference": "Разница",
+    "draftScore": "Оценка драфта"
+  },
+  "onboarding": {
+    "welcome": "Добро пожаловать в Dota AI Companion",
+    "body": "Локальный движок анализа драфта — полностью работает офлайн, с опциональным AI-слоем для понятных объяснений. Ничего никуда не отправляется, пока вы сами не настроите AI-провайдера в Настройках.",
+    "getStarted": "Начать"
+  }
+}

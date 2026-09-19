@@ -1,0 +1,39 @@
+.score-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.score-bar--compact { gap: 4px; }
+
+.score-bar__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.score-bar__label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.score-bar__value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.score-bar__track {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+.score-bar--compact .score-bar__track { height: 6px; }
+
+.score-bar__fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
