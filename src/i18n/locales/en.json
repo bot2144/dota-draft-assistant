@@ -31,7 +31,10 @@
     "enemyThreats": "Enemy Threats",
     "noAllyPicks": "No allies picked yet.",
     "noEnemyPicks": "No enemy picks yet.",
-    "insufficientData": "Insufficient data"
+    "insufficientData": "Insufficient data",
+    "allPositions": "All",
+    "sortedByFit": "Sorted by best fit for your current draft",
+    "instantTopPick": "Top pick right now"
   },
   "explorer": {
     "title": "Pick Explorer",
@@ -41,7 +44,15 @@
     "worstEnemies": "Worst Enemies",
     "vsCurrentEnemyDraft": "Vs Current Enemy Draft",
     "scoreForCurrentDraft": "Score For Current Draft",
-    "selectHero": "Select a hero to explore"
+    "selectHero": "Select a hero to explore",
+    "itemBuild": "Item Build",
+    "itemCategory": {
+      "starting": "Starting",
+      "early": "Early Game",
+      "core": "Core",
+      "situational": "Situational",
+      "luxury": "Luxury"
+    }
   },
   "simulator": {
     "title": "Draft Simulator",
@@ -81,7 +92,9 @@
     "aiIndicatorOff": "Local engine only — no AI request",
     "dataStatusLive": "Live stats connected",
     "dataStatusBundled": "Using bundled offline snapshot",
-    "dataStatusStale": "Using cached stats (refresh failed)"
+    "dataStatusStale": "Using cached stats (refresh failed)",
+    "alwaysOnTop": "Keep window on top of other apps",
+    "alwaysOnTopHint": "Useful when Dota 2 runs in Windowed or Borderless Windowed mode. This has no effect in true exclusive Fullscreen — no app can overlay a fullscreen game, that's a Windows/game limitation, not something this setting can change. Switch Dota to Borderless Windowed in its video settings if you want this to actually show above the game."
   },
   "common": {
     "close": "Close",
@@ -147,5 +160,24 @@
     "welcome": "Welcome to Dota AI Companion",
     "body": "A local-first draft analysis engine — works fully offline, with an optional AI layer for plain-language explanations. Nothing is sent anywhere unless you configure an AI provider yourself in Settings.",
     "getStarted": "Get started"
+  },
+  "gsi": {
+    "title": "Live Draft Detection (GSI)",
+    "explainer": "Reads picks/bans live from Dota 2 using Valve's own official Game State Integration feature — a local config file the game reads, not any form of memory or process access. No anti-cheat risk.",
+    "enable": "Enable live draft detection",
+    "autoFill": "Auto-fill the draft board as picks/bans happen",
+    "mySide": "My side",
+    "mySideAuto": "Auto-detect",
+    "statusOff": "Not running",
+    "statusListening": "Listening on port {{port}}, waiting for Dota 2...",
+    "statusReceiving": "Receiving live data from Dota 2",
+    "unmappedHeroes": "Unrecognized hero name(s) from the game (please report)",
+    "installHint": "Dota 2 needs a small config file pointing at this app. Find your Dota 2 folder automatically, or pick it yourself.",
+    "findFolders": "Find Dota 2 folder",
+    "pickCfgFolder": "Choose folder manually",
+    "install": "Install here",
+    "installed": "Config installed",
+    "noFoldersFound": "No Dota 2 install found automatically — choose the folder manually.",
+    "desktopOnly": "Live draft detection is available in the desktop app only."
   }
 }

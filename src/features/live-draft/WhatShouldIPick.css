@@ -17,6 +17,45 @@
   gap: 10px;
 }
 
+.what-should-i-pick__instant {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  padding: 6px 8px 6px 16px;
+  cursor: pointer;
+  transition: border-color 100ms ease;
+}
+.what-should-i-pick__instant:hover { border-color: var(--accent); }
+.what-should-i-pick__instant-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+.what-should-i-pick__instant-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.what-should-i-pick__instant-score {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ok);
+  font-variant-numeric: tabular-nums;
+}
+.what-should-i-pick__instant-cta {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(139, 92, 246, 0.14);
+}
+
 .what-should-i-pick__text {
   font-size: 13.5px;
   line-height: 1.6;

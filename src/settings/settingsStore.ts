@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import type { AppSettings } from '../types/settings';
-import { DEFAULT_FEATURE_FLAGS } from '../types/settings';
+import { DEFAULT_FEATURE_FLAGS, DEFAULT_GSI_SETTINGS } from '../types/settings';
 import { DEFAULT_WEIGHTS } from '../analytics/weights.config';
 import { DEFAULT_PLAYER_PROFILE } from '../types/player';
 import { cacheGetStale, cacheSet } from '../data/cache';
@@ -22,6 +22,8 @@ export const DEFAULT_SETTINGS: AppSettings = {
   overlayMode: 'hidden',
   onboarded: false,
   debugMode: false,
+  alwaysOnTop: false,
+  gsi: DEFAULT_GSI_SETTINGS,
 };
 
 interface SettingsStoreState {
@@ -45,6 +47,7 @@ export const useSettingsStore = create<SettingsStoreState>((set, get) => ({
           weights: { ...DEFAULT_WEIGHTS, ...stored.weights },
           playerProfile: { ...DEFAULT_PLAYER_PROFILE, ...stored.playerProfile },
           featureFlags: { ...DEFAULT_FEATURE_FLAGS, ...stored.featureFlags },
+          gsi: { ...DEFAULT_GSI_SETTINGS, ...stored.gsi },
         }
       : DEFAULT_SETTINGS;
 

@@ -56,6 +56,9 @@
   line-height: 1.5;
   margin: 4px 0 12px;
 }
+.settings-hint--error { color: var(--danger); }
+.settings-hint--warn { color: #e0b64f; }
+.settings-hint--ok { color: var(--ok); }
 
 .settings-hero-list {
   margin-bottom: 14px;

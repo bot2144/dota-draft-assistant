@@ -8,6 +8,7 @@ import { Button } from '../../components/Button';
 import { Modal } from '../../components/Modal';
 import { HeroPicker } from '../../components/HeroPicker';
 import { HeroGlyph } from '../../components/HeroBadge';
+import { GsiPanel } from './GsiPanel';
 import { getHero } from '../../data/heroes';
 import type { AIProviderId } from '../../types/ai';
 import type { ScoreFactorKey } from '../../types/scoring';
@@ -61,6 +62,8 @@ export function SettingsPage() {
 
   return (
     <div className="settings-page">
+      <GsiPanel />
+
       <Panel title={t('settings.aiProvider')}>
         <div className="settings-row">
           <label>{t('settings.aiProvider')}</label>
@@ -268,6 +271,16 @@ export function SettingsPage() {
             onChange={(e) => update({ hotkeys: { ...settings.hotkeys, toggleOverlay: e.target.value } })}
           />
         </div>
+        <div className="settings-row settings-row--checkbox">
+          <input
+            id="always-on-top"
+            type="checkbox"
+            checked={settings.alwaysOnTop}
+            onChange={(e) => update({ alwaysOnTop: e.target.checked })}
+          />
+          <label htmlFor="always-on-top">{t('settings.alwaysOnTop')}</label>
+        </div>
+        <p className="settings-hint">{t('settings.alwaysOnTopHint')}</p>
       </Panel>
 
       <Panel title={t('settings.cache')}>

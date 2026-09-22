@@ -11,6 +11,8 @@
     "core:window:allow-hide",
     "core:window:allow-is-visible",
     "core:window:allow-set-focus",
+    "core:window:allow-set-always-on-top",
+    "core:window:allow-is-always-on-top",
     "http:default",
     "store:default",
     "sql:default",
@@ -22,6 +24,8 @@
     "fs:allow-app-read",
     "global-shortcut:allow-register",
     "global-shortcut:allow-unregister",
-    "global-shortcut:allow-is-registered"
+    "global-shortcut:allow-is-registered",
+    "dialog:default",
+    "dialog:allow-open"
   ]
 }

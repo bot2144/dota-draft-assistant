@@ -4,11 +4,13 @@ import { ALL_HEROES, getHero } from '../../data/heroes';
 import { HeroGlyph, HeroBadge } from '../../components/HeroBadge';
 import { Panel } from '../../components/Panel';
 import { ScoreBar } from '../../components/ScoreBar';
+import { ConfidenceTag } from '../../components/ConfidenceTag';
 import { synergyEngine } from '../../analytics/SynergyEngine';
 import { counterEngine } from '../../analytics/CounterEngine';
 import { draftAnalyzer } from '../../analytics/DraftAnalyzer';
 import { computeDraftScore } from '../../analytics/DraftScore';
 import { roleAnalyzer } from '../../analytics/RoleAnalyzer';
+import { itemBuildEngine } from '../../analytics/ItemBuildEngine';
 import { useDraftAnalysis } from '../live-draft/useDraftAnalysis';
 import { useSettingsStore } from '../../settings/settingsStore';
 import { useLiveDataStore } from '../../store/liveDataStore';
@@ -56,6 +58,11 @@ export function PickExplorerPage() {
     if (!hero) return undefined;
     return draftAnalyzer.scoreHero(hero.id, draft, { weights, liveStats });
   }, [hero, draft, weights, liveStats]);
+
+  const itemBuild = useMemo(() => {
+    if (!hero) return undefined;
+    return itemBuildEngine.buildFor(hero, enemyTeam);
+  }, [hero, enemyTeam]);
 
   const openAllySlot = draft.ally.some((s) => !s.heroId);
   const whatIf = useMemo(() => {
@@ -155,6 +162,31 @@ export function PickExplorerPage() {
                     <li key={i}>{r}</li>
                   ))}
                 </ul>
+              </Panel>
+            )}
+
+            {itemBuild && (
+              <Panel title={t('explorer.itemBuild')}>
+                <div className="pick-explorer__item-build-header">
+                  <ConfidenceTag confidence={itemBuild.confidence} />
+                </div>
+                {(['starting', 'early', 'core', 'situational', 'luxury'] as const).map((cat) => {
+                  const inCat = itemBuild.items.filter((i) => i.category === cat);
+                  if (inCat.length === 0) return null;
+                  return (
+                    <div key={cat} className="pick-explorer__item-category">
+                      <h4 className="pick-explorer__item-category-title">{t(`explorer.itemCategory.${cat}`)}</h4>
+                      <ul className="pick-explorer__item-list">
+                        {inCat.map((item, i) => (
+                          <li key={i}>
+                            <span className="pick-explorer__item-name">{item.name}</span>
+                            <span className="pick-explorer__item-reason">{item.reason}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
               </Panel>
             )}
 

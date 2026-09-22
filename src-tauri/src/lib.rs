@@ -1,5 +1,7 @@
 use tauri_plugin_sql::{Migration, MigrationKind};
 
+mod gsi;
+
 /// Draft-history schema. Migrations only ever ADD structure going forward —
 /// never DROP or rewrite existing user tables — so an app update never
 /// destroys previously saved draft history.
@@ -31,7 +33,13 @@ pub fn run() {
         .add_migrations("sqlite:dota-assistant.db", migrations())
         .build(),
     )
-    .plugin(tauri_plugin_fs::init());
+    .plugin(tauri_plugin_fs::init())
+    .plugin(tauri_plugin_dialog::init())
+    .invoke_handler(tauri::generate_handler![
+      gsi::gsi_start,
+      gsi::gsi_write_config,
+      gsi::gsi_find_cfg_dirs
+    ]);
 
   #[cfg(desktop)]
   {

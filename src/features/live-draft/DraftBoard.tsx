@@ -43,6 +43,7 @@ function TeamColumn({ side }: { side: TeamSide }) {
         <Modal title={t('draft.addHero')} onClose={() => setPickingSlot(null)}>
           <HeroPicker
             excludeIds={unavailableHeroIds(draft)}
+            side={side === 'ally' ? 'ally' : undefined}
             onPick={(heroId) => {
               setHero(side, pickingSlot, heroId);
               setPickingSlot(null);

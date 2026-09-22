@@ -12,6 +12,7 @@ import { useUIStore } from './store/uiStore';
 import { useSettingsStore } from './settings/settingsStore';
 import { useLiveDataStore } from './store/liveDataStore';
 import { HERO_COUNT } from './data/heroes';
+import { useGsiIntegration } from './gsi/useGsiIntegration';
 import './App.css';
 
 function isTauri(): boolean {
@@ -57,6 +58,26 @@ function useGlobalHotkey(hotkey: string) {
   }, [hotkey]);
 }
 
+/** Keeps this app's own window above other windows when enabled (desktop only, best-effort). Never touches the game process. */
+function useAlwaysOnTop(enabled: boolean) {
+  useEffect(() => {
+    if (!isTauri()) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const { getCurrentWindow } = await import('@tauri-apps/api/window');
+        if (cancelled) return;
+        await getCurrentWindow().setAlwaysOnTop(enabled);
+      } catch {
+        // Best-effort — never break the app if this fails.
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [enabled]);
+}
+
 function App() {
   const { t, i18n } = useTranslation();
   const view = useUIStore((s) => s.view);
@@ -80,6 +101,8 @@ function App() {
   }, [loaded]);
 
   useGlobalHotkey(settings.hotkeys.toggleOverlay);
+  useAlwaysOnTop(settings.alwaysOnTop);
+  useGsiIntegration(settings.gsi);
 
   if (!loaded) {
     return <div className="app-loading">{t('common.loading')}</div>;
